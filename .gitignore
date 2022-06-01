@@ -1,0 +1,14 @@
+
+node_modules
+.DS_Store
+npm-debug.log
+log
+coverage
+package-lock.json
+stats.json
+.idea
+build
+dist
+lib
+.vscode
+package-lock.json

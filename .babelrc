@@ -1,0 +1,32 @@
+{
+	"presets": [
+		[
+			"@babel/preset-env",
+			{
+				"corejs": { 
+					"version": "3.8", 
+					"proposals": true 
+				},
+				"useBuiltIns": "usage", // usage只转移用到新语言,entry全部转移
+				"modules": false	// 保留es模块
+			}
+		],
+		"@babel/preset-react"
+	],
+	"plugins": [
+		"@babel/plugin-syntax-dynamic-import",
+		[	// 修复babel的两个bug（常用）
+			"@babel/plugin-transform-runtime",
+			{
+				"corejs": 3 // 指定 runtime-corejs 的版本，目前有 2 3 两个版本
+			}
+		], 
+		"@babel/plugin-transform-regenerator", // asyncGenerators与async用
+		[
+			"@babel/plugin-proposal-decorators", // 装饰器
+			{
+				"legacy": true
+			}
+		]
+	]
+}
