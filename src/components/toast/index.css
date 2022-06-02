@@ -11,6 +11,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+    /* css穿透 */
+    pointer-events: none;
 }
 .toast{
     margin: 5px 0;
